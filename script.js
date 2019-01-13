@@ -127,19 +127,39 @@ function setFont(level) {
 
 }
 
-function showScore() {
-    landing.style.display = "none";
-    testing.style.display = "none";
-    scoreDiv.style.display = "visible";
-
+function showLanding() {
+    console.log("show landing");
+    $('#landingPage').show();
+    $('#testing').hide();
+    $('#scoreDiv').hide();
+    // $('#myDiv').slideUp();
+    // $('#myDiv').slideUp();
+    // $('#myDiv').slideUp();
+    // $('#myDiv').fadeOut();
+    // $('#myDiv').fadeOut();
+    // $('#myDiv').fadeOut();
 }
 
 function showTesting() {
-    landing.style.display = "none";
-    testing.style.display = "visible";
-    scoreDiv.style.display = "none";
+    $('#landingPage').hide();
+    $('#testing').show();
+    // $('#scoreDiv').hide();
+    console.log("show testing");
+    nextWord();
 }
 
+function showScore() {
+    document.getElementById("scoreUser").innerHTML = "Your Test Results: " + score;
+    $('#landingPage').hide();
+    $('#testing').hide();
+    $('#scoreDiv').show();
+    console.log("show score");
+}
+
+document.getElementById("btnEnter").addEventListener("click", function () {
+    console.log("enter pressed");
+    showTesting();
+});
 
 function nextWord() {
     console.log("############ " + testChar + " ############");
@@ -202,7 +222,8 @@ function nextWord() {
     }
 
     if (level === 10) {
-        document.getElementById("score").innerHTML = "20/20";
+        score = "20/20";
+        showScore()
     }
 
     if (fails <= 1 && level !== 10) {
@@ -215,4 +236,5 @@ function nextWord() {
     }
 }
 
-nextWord();
+showLanding();
+
