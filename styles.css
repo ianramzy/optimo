@@ -9,8 +9,9 @@
 #charDiv p {
     font-family: Cambria, Georgia, serif;
     font-weight: bold;
-    padding-left: 20px;
-    /*font-size: 100px;*/
+    /*padding-left: 20px;*/
+    text-align: center;
+    line-height: 400px;
 }
 
 
@@ -22,7 +23,6 @@
 
 body {
     background-color: #fff;
-    /*padding: 15vh;*/
     font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: #595959;
     font-weight: 400;
@@ -32,7 +32,6 @@ html, body {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 2.5vh;
     background-color: #DCECFE;
     background: -webkit-linear-gradient(-450deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, -webkit-linear-gradient(-450deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, -webkit-linear-gradient(-450deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, -webkit-linear-gradient(-450deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, -webkit-linear-gradient(-450deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, -webkit-linear-gradient(-390deg, #DCECFE 0%, #F5E1EE 100%) no-repeat;
     background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, linear-gradient(120deg, #DCECFE 0%, #F5E1EE 100%) no-repeat;
@@ -56,3 +55,19 @@ html, body {
     background: #F5E1EE;
 }
 /*button*/
+
+
+
+.topmenu {
+    margin:19px;
+    position: absolute;
+    color: white;
+}
+
+.rectangle {
+    position: absolute;
+    display: block;
+    height: 80px;
+    width: 100%;
+    background-color: blue;
+}
