@@ -81,3 +81,25 @@ html, body {
     padding-top: 120px;
     padding-left: 50px;
 }
+#warnings {
+    position: fixed;
+    padding-left: 0px;
+    padding-right: 10px;
+    bottom: 10px;
+}
+
+#instructions{
+    padding: 10px;
+    font-size: 18px;
+}
+
+/*style image*/
+/*#imageDiv {*/
+    /*position: relative;*/
+/*}*/
+/*#imageDiv img {*/
+    /*position: absolute;*/
+    /*top: 0px;*/
+    /*right: 0px;*/
+/*}*/
+/*style image*/

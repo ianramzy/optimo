@@ -28,19 +28,20 @@ recognition.onresult = function (event) {
 
 
     if (testChar.toUpperCase() == transcript.toUpperCase()) {
-        document.getElementById("result").innerHTML = "correct";
+        // document.getElementById("result").innerHTML = "correct";
+        fails = fails;
     } else {
-        document.getElementById("result").innerHTML = "false";
+        // document.getElementById("result").innerHTML = "false";
         fails = fails + 1;
     }
 };
 
 recognition.onstart = function () {
-    document.getElementById("recording").innerHTML = "recording status: ON";
+    // document.getElementById("recording").innerHTML = "recording status: ON";
 }
 
 recognition.onspeechend = function () {
-    document.getElementById("recording").innerHTML = "recording status: OFF";
+    // document.getElementById("recording").innerHTML = "recording status: OFF";
 }
 
 recognition.onerror = function (event) {
@@ -165,11 +166,10 @@ document.getElementById("btnRedo").addEventListener("click", function () {
 
 function nextWord() {
     console.log("############ " + testChar + " ############");
-    document.getElementById("round").innerHTML = "round: " + round;
-    document.getElementById("level").innerHTML = "level: " + level;
-    document.getElementById("fails").innerHTML = "fails: " + fails;
-    document.getElementById("youSaid").innerHTML = "said: " + transcript;
-
+    // document.getElementById("round").innerHTML = "round: " + round;
+    // document.getElementById("level").innerHTML = "level: " + level;
+    // document.getElementById("fails").innerHTML = "fails: " + fails;
+    // document.getElementById("youSaid").innerHTML = "said: " + transcript;
     console.log("said: " + transcript.toUpperCase());
     console.log("fails: " + fails);
     console.log("round: " + round);

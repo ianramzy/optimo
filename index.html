@@ -15,30 +15,52 @@
 <div class="rectangle"></div>
 <h1 class="topmenu">OPTIMO</h1>
 
+<!--<div id="imageDiv">-->
+    <!--<img src="res/logo.png" class="ribbon" width="104" height="80"/>-->
+<!--</div>-->
 
 <div id="landingPage">
-    <h1>welcome to OPTIMO</h1>
-    <button id="btnEnter" class="btnEnter" style="background-color: rgb(64,64,64);">Enter</button>
+    <h1>Welcome to OPTIMO</h1>
+    <div id="instructions">
+        <ul>
+            <li>During the test, be seated 10 feet away from the computer screen</li>
+            <li>Ensure the computer is at eye level</li>
+            <li>Ensure access to your microphone has been enabled for your browser</li>
+            <li>If the chart seems too dark or too bright, adjust computer brightness accordingly</li>
+            <li>Speak loudly and clearly enunciate each letter you see</li>
+            <li>Wait a few seconds until the letter has fully appeared before speaking</li>
+            <li>Your results will be shown once the test in finished</li>
+            <li>For more precise results, test each eye separately</li>
+        </ul>
+    </div>
+    <button id="btnEnter" class="btnEnter" style="background-color: rgb(64,64,64);">Begin Test</button>
 </div>
 
 <div id="testing">
     <div id="charDiv">
         <p id="char" style="font-family: Cambria, Georgia, serif;">char</p>
     </div>
-    <div id="logs">
-        <p id="recording">recording status: not recording</p>
-        <p id="youSaid">you said:</p>
-        <p id="result">result</p>
-        <p id="score">Your score is: </p>
-        <p id="fails">fails: </p>
-        <p id="round">round: </p>
-        <p id="level">level: </p>
-    </div>
+    <!--<div id="logs">-->
+    <!--<p id="recording">recording status: not recording</p>-->
+    <!--<p id="youSaid">you said:</p>-->
+    <!--<p id="result">result</p>-->
+    <!--<p id="score">Your score is: </p>-->
+    <!--<p id="fails">fails: </p>-->
+    <!--<p id="round">round: </p>-->
+    <!--<p id="level">level: </p>-->
+    <!--</div>-->
 </div>
 
 <div id="scoreDiv">
     <h2 id="scoreUser"></h2>
     <button id="btnRedo" class="btnRedo" style="background-color: rgb(64,64,64);">Take Again</button>
+    <div id="warnings">
+        <p>
+            The information provided by Optimo is created and published online for informational purposes only. It is
+            not intended to be a substitute for professional medical advice and should not be relied on as health or
+            personal advice. For clinical diagnosis, please consult a medical professional.
+        </p>
+    </div>
 </div>
 
 
