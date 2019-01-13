@@ -53,6 +53,7 @@
 #charDiv p{
     font-family: Cambria, Georgia, serif;
     font-weight: bold;
+    padding-left: 20px;
     /*font-size: 100px;*/
 }
 
@@ -62,4 +63,9 @@
 
 @media (max-width: 1200px) {
     #bsaHolder{ display:none;}
+}
+
+#logs p{
+     font-size: x-large;
+    font-weight: bold;
 }

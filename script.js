@@ -12,6 +12,7 @@ var testChar = "Q";
 var round = 0;
 var fails = 0;
 var level = 1;
+var transcript ='';
 
 // If false, the recording will stop after a few seconds of silence.
 // When true, the silence period is longer (about 15 seconds),
@@ -21,9 +22,7 @@ recognition.continuous = false;
 // This block is called every time the Speech APi captures a line.
 recognition.onresult = function (event) {
     var current = event.resultIndex;
-    var transcript = event.results[current][0].transcript;
-    document.getElementById("youSaid").innerHTML = "you said: " + transcript;
-    console.log("test char: " + testChar.toUpperCase() + ", you said: " + transcript.toUpperCase());
+    transcript = event.results[current][0].transcript;
     transcript = replace(transcript);
 
 
@@ -56,22 +55,37 @@ recognition.onend = function () {
 
 function replace(text) {
     if (text.toUpperCase() === "OH") {
-        return o;
+        return 'o';
     }
     if (text.toUpperCase() === "ZEDD") {
-        return z;
+        return 'z';
     }
     if (text.toUpperCase() === "BEEF") {
-        return p;
+        return 'p';
     }
     if (text.toUpperCase() === "SAID") {
-        return z;
+        return 'z';
+    }
+    if (text.toUpperCase() === "SAD") {
+        return 'z';
     }
     if (text.toUpperCase() === "BE") {
-        return p;
+        return 'p';
+    }
+    if (text.toUpperCase() === "DAD") {
+        return 'z';
+    }
+    if (text.toUpperCase() === "PT") {
+        return 'p';
+    }
+    if (text.toUpperCase() === "DEE DEE") {
+        return 'p';
+    }
+    if (text.toUpperCase() === "THAT") {
+        return 'p';
     }
     if (text.toUpperCase() === "HE") {
-        return e;
+        return 'e';
     } else {
         return text;
     }
@@ -110,13 +124,18 @@ function setFont(level) {
 }
 
 function nextWord() {
+    console.log("############ " + testChar + " ############");
     document.getElementById("round").innerHTML = "round: " + round;
     document.getElementById("level").innerHTML = "level: " + level;
     document.getElementById("fails").innerHTML = "fails: " + fails;
+    document.getElementById("youSaid").innerHTML = "said: " + transcript;
+
+    console.log("said: " + transcript.toUpperCase());
     console.log("fails: " + fails);
     console.log("round: " + round);
     console.log("level: " + level);
-    console.log("############ NEXT WORD ############");
+    console.log("font:" + fontSize);
+    console.log("############ " + testChar + " ############");
     round = round + 1;
     if (fails >= 2) {
         if (level === 1) {
@@ -162,9 +181,7 @@ function nextWord() {
         testChar = ('CDEFPTOZ').split('')[(Math.floor(Math.random() * 8))];
         // testChar = ('E').split('')[(Math.floor(Math.random() * 0))];
         document.getElementById("char").innerHTML = testChar;
-        console.log("next word is: " + testChar);
         document.getElementById("charDiv").style.fontSize = fontSize + "px";
-        console.log(fontSize);
         recognition.stop();
         recognition.start();
     }
