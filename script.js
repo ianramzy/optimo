@@ -12,7 +12,11 @@ var testChar = "Q";
 var round = 0;
 var fails = 0;
 var level = 1;
-var transcript ='';
+var transcript = '';
+var score;
+var landing = document.getElementById("landingPage");
+var testing = document.getElementById("testing");
+var scoreDiv = document.getElementById("scoreDiv");
 
 // If false, the recording will stop after a few seconds of silence.
 // When true, the silence period is longer (about 15 seconds),
@@ -43,7 +47,7 @@ recognition.onspeechend = function () {
 }
 
 recognition.onerror = function (event) {
-    if (event.error == 'no-speech') {
+    if (event.error === 'no-speech') {
         console.log("no speech detected");
     }
     ;
@@ -84,6 +88,9 @@ function replace(text) {
     if (text.toUpperCase() === "THAT") {
         return 'p';
     }
+    if (text.toUpperCase() === "ZEDGE") {
+        return 'z';
+    }
     if (text.toUpperCase() === "HE") {
         return 'e';
     } else {
@@ -93,11 +100,8 @@ function replace(text) {
 }
 
 function setFont(level) {
-    if (level === 1) {
-        fontSize = 100
-    }
     if (level === 2) {
-        fontSize = fontSize *0.47
+        fontSize = fontSize * 0.47
     }
     if (level === 3) {
         fontSize = fontSize * 0.8
@@ -109,7 +113,7 @@ function setFont(level) {
         fontSize = fontSize * 0.8
     }
     if (level === 6) {
-        fontSize = fontSize * .75
+        fontSize = fontSize * 0.75
     }
     if (level === 7) {
         fontSize = fontSize * 0.83
@@ -122,6 +126,20 @@ function setFont(level) {
     }
 
 }
+
+function showScore() {
+    landing.style.display = "none";
+    testing.style.display = "none";
+    scoreDiv.style.display = "visible";
+
+}
+
+function showTesting() {
+    landing.style.display = "none";
+    testing.style.display = "visible";
+    scoreDiv.style.display = "none";
+}
+
 
 function nextWord() {
     console.log("############ " + testChar + " ############");
@@ -136,34 +154,44 @@ function nextWord() {
     console.log("level: " + level);
     console.log("font:" + fontSize);
     console.log("############ " + testChar + " ############");
+
     round = round + 1;
     if (fails >= 2) {
         if (level === 1) {
-            document.getElementById("score").innerHTML = "20/200";
+            score = "20/200";
+            showScore()
         }
         if (level === 2) {
-            document.getElementById("score").innerHTML = "20/100";
+            score = "20/100";
+            showScore()
         }
         if (level === 3) {
-            document.getElementById("score").innerHTML = "20/80";
+            score = "20/80";
+            showScore()
         }
         if (level === 4) {
-            document.getElementById("score").innerHTML = "20/63";
+            score = "20/63";
+            showScore()
         }
         if (level === 5) {
-            document.getElementById("score").innerHTML = "20/50";
+            score = "20/50";
+            showScore()
         }
         if (level === 6) {
-            document.getElementById("score").innerHTML = "20/40";
+            score = "20/40";
+            showScore()
         }
         if (level === 7) {
-            document.getElementById("score").innerHTML = "20/32";
+            score = "20/32";
+            showScore()
         }
         if (level === 8) {
-            document.getElementById("score").innerHTML = "20/25";
+            score = "20/25";
+            showScore()
         }
         if (level === 9) {
-            document.getElementById("score").innerHTML = "20/20";
+            score = "20/20";
+            showScore()
         }
     }
     if (round === 5) {

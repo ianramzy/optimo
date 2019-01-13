@@ -1,5 +1,4 @@
 
-
 .no-browser-support {
     display: none;
     font-size: 1.2rem;
@@ -7,50 +6,7 @@
     margin-top: 35px;
 }
 
-.app {
-    margin: 40px auto;
-}
-
-#note-textarea {
-    margin: 20px 0;
-}
-
-#recording-instructions {
-    margin: 15px auto 60px;
-}
-
-#notes {
-    padding-top: 20px;
-}
-
-.note .header {
-    font-size: 0.9em;
-    color: #888;
-    margin-bottom: 10px;
-}
-
-.note .delete-note,
-.note .listen-note {
-    text-decoration: none;
-    margin-left: 15px;
-}
-
-.note .content {
-    margin-bottom: 40px;
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 50px 25px;
-    }
-
-    button {
-        margin-bottom: 10px;
-    }
-
-}
-
-#charDiv p{
+#charDiv p {
     font-family: Cambria, Georgia, serif;
     font-weight: bold;
     padding-left: 20px;
@@ -58,14 +14,45 @@
 }
 
 
-
-/* -- Demo ads -- */
-
-@media (max-width: 1200px) {
-    #bsaHolder{ display:none;}
-}
-
-#logs p{
-     font-size: x-large;
+#logs p {
+    font-size: x-large;
     font-weight: bold;
 }
+
+
+body {
+    background-color: #fff;
+    /*padding: 15vh;*/
+    font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: #595959;
+    font-weight: 400;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 2.5vh;
+    background-color: #DCECFE;
+    background: -webkit-linear-gradient(-450deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, -webkit-linear-gradient(-450deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, -webkit-linear-gradient(-450deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, -webkit-linear-gradient(-450deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, -webkit-linear-gradient(-450deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, -webkit-linear-gradient(-390deg, #DCECFE 0%, #F5E1EE 100%) no-repeat;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.05)) repeat-y, linear-gradient(120deg, #DCECFE 0%, #F5E1EE 100%) no-repeat;
+    background-position: 10%, 30%, 50%, 70%, 90%, 0;
+    background-size: 2px auto, 2px auto, 2px auto, 2px auto, 2px auto, 100% auto;
+    background-attachment: fixed;
+}
+
+/*button*/
+.btn {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* On mouse-over */
+.btn:hover {
+    background: #F5E1EE;
+}
+/*button*/
