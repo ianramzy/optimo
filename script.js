@@ -22,16 +22,17 @@ recognition.continuous = false;
 
 // This block is called every time the Speech APi captures a line.
 recognition.onresult = function (event) {
+    console.log("******** onresult called ********");
     var current = event.resultIndex;
     transcript = event.results[current][0].transcript;
     transcript = replace(transcript);
 
-
-    if (testChar.toUpperCase() == transcript.toUpperCase()) {
+    if (testChar.toUpperCase() === transcript.toUpperCase()) {
+        console.log(testChar.toUpperCase() + " is equal to " + transcript.toUpperCase() + " is correct");
         // document.getElementById("result").innerHTML = "correct";
-        fails = fails;
     } else {
         // document.getElementById("result").innerHTML = "false";
+        console.log(testChar.toUpperCase() + " is equal to " + transcript.toUpperCase() + " is wrong");
         fails = fails + 1;
     }
 };
