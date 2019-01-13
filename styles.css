@@ -2,16 +2,16 @@
 .no-browser-support {
     display: none;
     font-size: 1.2rem;
-    color: #e64427;
+    color: #e600d4;
     margin-top: 35px;
 }
 
 #charDiv p {
     font-family: Cambria, Georgia, serif;
     font-weight: bold;
-    /*padding-left: 20px;*/
     text-align: center;
     line-height: 400px;
+    padding-top: 30px;
 }
 
 
@@ -54,12 +54,12 @@ html, body {
 .btn:hover {
     background: #F5E1EE;
 }
+
 /*button*/
 
 
-
 .topmenu {
-    margin:19px;
+    margin: 19px;
     position: absolute;
     color: white;
 }
@@ -69,5 +69,15 @@ html, body {
     display: block;
     height: 80px;
     width: 100%;
-    background-color: blue;
+    background-color: rgba(127, 101, 255, 0.25);
+}
+
+#landingPage {
+    padding-top: 120px;
+    padding-left: 50px;
+}
+
+#scoreDiv {
+    padding-top: 120px;
+    padding-left: 50px;
 }

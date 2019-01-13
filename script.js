@@ -14,9 +14,6 @@ var fails = 0;
 var level = 1;
 var transcript = '';
 var score;
-var landing = document.getElementById("landingPage");
-var testing = document.getElementById("testing");
-var scoreDiv = document.getElementById("scoreDiv");
 
 // If false, the recording will stop after a few seconds of silence.
 // When true, the silence period is longer (about 15 seconds),
@@ -129,35 +126,40 @@ function setFont(level) {
 
 function showLanding() {
     console.log("show landing");
-    $('#landingPage').show();
-    $('#testing').hide();
-    $('#scoreDiv').hide();
-    // $('#myDiv').slideUp();
-    // $('#myDiv').slideUp();
-    // $('#myDiv').slideUp();
-    // $('#myDiv').fadeOut();
-    // $('#myDiv').fadeOut();
-    // $('#myDiv').fadeOut();
+    $('#landingPage').fadeIn();
+    $('#testing').fadeOut();
+    $('#scoreDiv').fadeOut();
 }
 
 function showTesting() {
-    $('#landingPage').hide();
-    $('#testing').show();
-    // $('#scoreDiv').hide();
+    $('#landingPage').fadeOut();
+    $('#testing').fadeIn();
+    $('#scoreDiv').fadeOut();
     console.log("show testing");
     nextWord();
 }
 
 function showScore() {
     document.getElementById("scoreUser").innerHTML = "Your Test Results: " + score;
-    $('#landingPage').hide();
-    $('#testing').hide();
-    $('#scoreDiv').show();
+    $('#landingPage').fadeOut();
+    $('#testing').fadeOut();
+    $('#scoreDiv').fadeIn();
     console.log("show score");
 }
 
 document.getElementById("btnEnter").addEventListener("click", function () {
     console.log("enter pressed");
+    showTesting();
+});
+document.getElementById("btnRedo").addEventListener("click", function () {
+    console.log("take again pressed");
+    fontSize = window.outerHeight * 0.32;
+    testChar = "Q";
+    round = 0;
+    fails = 0;
+    level = 1;
+    transcript = '';
+    score;
     showTesting();
 });
 
@@ -227,12 +229,14 @@ function nextWord() {
     }
 
     if (fails <= 1 && level !== 10) {
+        $("#charDiv").fadeOut("fast");
         testChar = ('CDEFPTOZ').split('')[(Math.floor(Math.random() * 8))];
         // testChar = ('E').split('')[(Math.floor(Math.random() * 0))];
         document.getElementById("char").innerHTML = testChar;
         document.getElementById("charDiv").style.fontSize = fontSize + "px";
         recognition.stop();
         recognition.start();
+        $("#charDiv").fadeIn();
     }
 }
 
