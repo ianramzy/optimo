@@ -5,7 +5,7 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/ianramzy/optimo.svg)
 [![Repo Link](https://img.shields.io/badge/Repo-Link-black.svg)](https://github.com/ianramzy/optimo)
 
-Web app to test vision.
+👓 Web app to test your vision, no doctor required!
 For link, pictures and documentation see:
 # → https://ianramzy.com/project/optimo.html
 
